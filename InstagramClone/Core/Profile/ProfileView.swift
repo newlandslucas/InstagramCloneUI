@@ -55,15 +55,37 @@ struct ProfileView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                     
-                    Button {
-                        
-                    } label: {
-                        Text("Edit Profile")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .frame(width: 360, height: 32)
-                            .foregroundColor(.black)
-                            .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.gray, lineWidth: 1))
+                    HStack {
+                        Button {
+                            
+                        } label: {
+                            Text("Edit Profile")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .frame(width: 140, height: 32)
+                                .background(Color.gray.opacity(0.15))
+                                .cornerRadius(8)
+                    }
+                        Button {
+                            
+                        } label: {
+                            Text("Share")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .frame(width: 140, height: 32)
+                                .background(Color.gray.opacity(0.15))
+                                .cornerRadius(8)
+                    }
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "person.badge.plus")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .frame(width: 45, height: 32)
+                                .background(Color.gray.opacity(0.15))
+                                .cornerRadius(8)
+                    }
                     }
                     
                     Divider()
@@ -72,15 +94,26 @@ struct ProfileView: View {
                 
                 //MARK: Post grid View
                 
-                LazyVGrid(columns: gridItems, spacing: 1) {
-                    ForEach(0 ... 10, id: \.self) { index in
-                        Image("userImage")
-                            .resizable()
-                            .scaledToFill()
-                    }
+                LazyVGrid(columns: gridItems, spacing: 2) {
+//                    ForEach(0 ... 10, id: \.self) { index in
+//                        Image("userImage")
+//                            .resizable()
+//                            .scaledToFill()
+//                    }
+                    Image("userImage")
+                        .resizable()
+                        .scaledToFit()
+                    Image("userImage2")
+                        .resizable()
+                        .scaledToFit()
+                    Image("userImage3")
+                        .resizable()
+                        .scaledToFit()
+                    Image("userImage4")
+                        .resizable()
+                        .scaledToFit()
                 }
             }
-            .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -90,6 +123,17 @@ struct ProfileView: View {
                         Image(systemName: "line.3.horizontal")
                     }
 
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    HStack(spacing: 3) {
+                        Image(systemName: "lock")
+                            .imageScale(.large)
+                        Text("lucasnewlands_")
+                            .font(.system(size: 20, weight: .bold))
+                       
+                    }
+                   
                 }
             }
             .background(Color(.systemBackground))
