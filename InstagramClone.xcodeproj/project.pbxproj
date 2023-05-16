@@ -12,6 +12,8 @@
 		94E2571F2A12FBBC00407C72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E2571E2A12FBBC00407C72 /* Assets.xcassets */; };
 		94E257222A12FBBC00407C72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E257212A12FBBC00407C72 /* Preview Assets.xcassets */; };
 		94E257352A12FD7300407C72 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E257342A12FD7300407C72 /* MainTabView.swift */; };
+		94E257372A12FF2200407C72 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E257362A12FF2200407C72 /* ProfileView.swift */; };
+		94E2573C2A13062900407C72 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2573B2A13062900407C72 /* UserStatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		94E2571E2A12FBBC00407C72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94E257212A12FBBC00407C72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		94E257342A12FD7300407C72 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		94E257362A12FF2200407C72 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		94E2573B2A13062900407C72 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		94E2572B2A12FC0700407C72 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				94E2573A2A13060800407C72 /* Components */,
 				94E257332A12FCA500407C72 /* UploadPost */,
 				94E257322A12FC9A00407C72 /* TabBar */,
 				94E2572D2A12FC5000407C72 /* Authentication */,
@@ -133,6 +138,7 @@
 		94E2572F2A12FC6F00407C72 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				94E257362A12FF2200407C72 /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -164,6 +170,14 @@
 			children = (
 			);
 			path = UploadPost;
+			sourceTree = "<group>";
+		};
+		94E2573A2A13060800407C72 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				94E2573B2A13062900407C72 /* UserStatView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E257372A12FF2200407C72 /* ProfileView.swift in Sources */,
 				94E2571D2A12FBBA00407C72 /* ContentView.swift in Sources */,
 				94E2571B2A12FBBA00407C72 /* InstagramCloneApp.swift in Sources */,
+				94E2573C2A13062900407C72 /* UserStatView.swift in Sources */,
 				94E257352A12FD7300407C72 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
