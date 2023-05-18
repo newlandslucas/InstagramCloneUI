@@ -27,11 +27,7 @@ struct RegisterEmailView: View {
                 
                 TextField("Email", text: $emailText)
                     .autocapitalization(.none)
-                    .font(.subheadline)
-                    .padding(12)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(10)
-                    .padding(.horizontal, 24)
+                    .modifier(IGTextFieldModifier())
                 
                 Button {
                     print("Login")
