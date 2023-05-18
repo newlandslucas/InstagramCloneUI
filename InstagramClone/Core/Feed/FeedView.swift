@@ -18,7 +18,7 @@ struct FeedView: View {
                 }
                 .padding(.top, 8)
             }
-            .navigationTitle("Feed")
+            .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
