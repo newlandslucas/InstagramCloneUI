@@ -1,5 +1,5 @@
 //
-//  EmailView.swift
+//  CreateUsernameView.swift
 //  InstagramClone
 //
 //  Created by Lucas Newlands on 18/05/23.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct RegisterEmailView: View {
-    @State private var emailText: String = ""
+struct CreateUsernameView: View {
+    @State private var usernameText: String = ""
     @Environment(\.dismiss) var dismiss
-    
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 12) {
-                Text("Add your email")
+                Text("Create your Username")
                     .font(.title)
                     .fontWeight(.bold)
                     .padding(.top)
@@ -25,13 +25,12 @@ struct RegisterEmailView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24)
                 
-                TextField("Email", text: $emailText)
+                TextField("Username", text: $usernameText)
                     .autocapitalization(.none)
                     .modifier(IGTextFieldModifier())
                 
                 NavigationLink {
                     CreateUsernameView()
-                        .navigationBarBackButtonHidden()
                 } label: {
                     Text("Next")
                         .font(.subheadline)
@@ -42,29 +41,24 @@ struct RegisterEmailView: View {
                         .cornerRadius(10)
                 }
                 .padding(.vertical)
-
                 
                 Spacer()
             }
-           
-        }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Image(systemName: "chevron.left")
-                    .imageScale(.large)
-                    .onTapGesture {
-                        dismiss()
-                    }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Image(systemName: "chevron.left")
+                        .imageScale(.large)
+                        .onTapGesture {
+                            dismiss()
+                        }
+                }
             }
         }
-        .background(Color(.systemBackground))
-        .foregroundColor(Color(.label))
     }
-    
 }
 
-struct EmailView_Previews: PreviewProvider {
+struct CreateUsernameView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterEmailView()
+        CreateUsernameView()
     }
 }
