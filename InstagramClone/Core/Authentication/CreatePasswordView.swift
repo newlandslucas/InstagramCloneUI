@@ -1,5 +1,5 @@
 //
-//  CreateUsernameView.swift
+//  CreatePasswordView.swift
 //  InstagramClone
 //
 //  Created by Lucas Newlands on 18/05/23.
@@ -7,30 +7,31 @@
 
 import SwiftUI
 
-struct CreateUsernameView: View {
-    @State private var usernameText: String = ""
+struct CreatePasswordView: View {
+    
+    @State private var passwordText: String = ""
     @Environment(\.dismiss) var dismiss
-
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 12) {
-                Text("Create your Username")
+                Text("Create a password")
                     .font(.title)
                     .fontWeight(.bold)
                     .padding(.top)
                 
-                Text("You'll use this email to sign in to your account")
+                Text("Your password must be have at least 6 characters in length")
                     .font(.footnote)
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24)
                 
-                TextField("Username", text: $usernameText)
+                SecureField("Password", text: $passwordText)
                     .autocapitalization(.none)
                     .modifier(IGTextFieldModifier())
-                
+                    .padding(.top)
                 NavigationLink {
-                    CreatePasswordView()
+                    CreateUsernameView()
                         .navigationBarBackButtonHidden()
                 } label: {
                     Text("Next")
@@ -42,26 +43,29 @@ struct CreateUsernameView: View {
                         .cornerRadius(10)
                 }
                 .padding(.vertical)
+
                 
                 Spacer()
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Image(systemName: "chevron.left")
-                        .imageScale(.large)
-                        .onTapGesture {
-                            dismiss()
-                        }
-                }
-            }
-            .background(Color(.systemBackground))
-            .foregroundColor(Color(.label))
+           
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Image(systemName: "chevron.left")
+                    .imageScale(.large)
+                    .onTapGesture {
+                        dismiss()
+                    }
+            }
+            
+        }
+        .background(Color(.systemBackground))
+        .foregroundColor(Color(.label))
     }
 }
 
-struct CreateUsernameView_Previews: PreviewProvider {
+struct CreatePasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateUsernameView()
+        CreatePasswordView()
     }
 }
