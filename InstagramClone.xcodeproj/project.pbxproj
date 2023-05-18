@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		94A117192A169909008BB60C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A117182A169909008BB60C /* SearchView.swift */; };
 		94A1171C2A169CB1008BB60C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1171B2A169CB1008BB60C /* LoginView.swift */; };
+		94A1171E2A16A38D008BB60C /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1171D2A16A38D008BB60C /* RegisterEmailView.swift */; };
 		94E2571B2A12FBBA00407C72 /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2571A2A12FBBA00407C72 /* InstagramCloneApp.swift */; };
 		94E2571D2A12FBBA00407C72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2571C2A12FBBA00407C72 /* ContentView.swift */; };
 		94E2571F2A12FBBC00407C72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E2571E2A12FBBC00407C72 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		94A117182A169909008BB60C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		94A1171B2A169CB1008BB60C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		94A1171D2A16A38D008BB60C /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
 		94E257172A12FBBA00407C72 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E2571A2A12FBBA00407C72 /* InstagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneApp.swift; sourceTree = "<group>"; };
 		94E2571C2A12FBBA00407C72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				94A1171B2A169CB1008BB60C /* LoginView.swift */,
+				94A1171D2A16A38D008BB60C /* RegisterEmailView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				94E2573C2A13062900407C72 /* UserStatView.swift in Sources */,
 				94E2573E2A13B87400407C72 /* FeedView.swift in Sources */,
 				94E257352A12FD7300407C72 /* MainTabView.swift in Sources */,
+				94A1171E2A16A38D008BB60C /* RegisterEmailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
