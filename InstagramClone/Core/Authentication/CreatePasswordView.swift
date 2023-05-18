@@ -31,7 +31,7 @@ struct CreatePasswordView: View {
                     .modifier(IGTextFieldModifier())
                     .padding(.top)
                 NavigationLink {
-                    CreateUsernameView()
+                    CompleteSignUpView()
                         .navigationBarBackButtonHidden()
                 } label: {
                     Text("Next")
