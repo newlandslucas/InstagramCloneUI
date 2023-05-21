@@ -9,11 +9,15 @@ import SwiftUI
 
 struct CurrentUserProfileView: View {
     
+    let user: User
+    
     private let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1),
     ]
+    
+    private let imageDimensions: CGFloat = (UIScreen.main.bounds.width / 3) - 1
     
     var body: some View {
         NavigationStack {
@@ -95,25 +99,7 @@ struct CurrentUserProfileView: View {
                 
                 //MARK: Post grid View
                 
-                LazyVGrid(columns: gridItems, spacing: 2) {
-//                    ForEach(0 ... 10, id: \.self) { index in
-//                        Image("userImage")
-//                            .resizable()
-//                            .scaledToFill()
-//                    }
-                    Image("userImage")
-                        .resizable()
-                        .scaledToFit()
-                    Image("userImage2")
-                        .resizable()
-                        .scaledToFit()
-                    Image("userImage3")
-                        .resizable()
-                        .scaledToFit()
-                    Image("userImage4")
-                        .resizable()
-                        .scaledToFit()
-                }
+                PostGridView(posts: Post.MOCK_POSTS)
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -145,6 +131,6 @@ struct CurrentUserProfileView: View {
 
 struct CurrentUserProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentUserProfileView()
+        CurrentUserProfileView(user: User.MOCK_USER[0])
     }
 }

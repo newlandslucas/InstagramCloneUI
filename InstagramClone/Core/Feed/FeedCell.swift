@@ -8,18 +8,23 @@
 import SwiftUI
 
 struct FeedCell: View {
+    let post: Post
+    
     var body: some View {
         VStack {
             
             //MARK: Image + username
             HStack {
-                Image("userImage")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 36, height: 36)
-                    .clipShape(Circle())
-                
-                Text("lucasnewlands_")
+                if let user = post.user {
+                    Image(user.profileImageURL ?? "")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 36, height: 36)
+                        .clipShape(Circle())
+                    
+                    Text(user.username)
+                }
+               
                 
                 Spacer()
             }
@@ -27,7 +32,7 @@ struct FeedCell: View {
             
             //MARK: post image
             
-            Image("userImage2")
+            Image(post.imageUrl)
                 .resizable()
                 .scaledToFill()
                 .frame(height: 400)
@@ -63,7 +68,7 @@ struct FeedCell: View {
             
             //MARK: likes label
             
-            Text("100 likes")
+            Text("\(post.likes) likes")
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -73,8 +78,8 @@ struct FeedCell: View {
             //MARK: caption label
             
             HStack {
-                Text("lucasnewlands_").fontWeight(.semibold) +
-                Text("This is some test caption for now")
+                Text("\(post.user?.username ?? "")").fontWeight(.semibold) +
+                Text(post.caption)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading, 10)
@@ -94,6 +99,6 @@ struct FeedCell: View {
 
 struct FeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        FeedCell()
+        FeedCell(post: Post.MOCK_POSTS[0])
     }
 }
